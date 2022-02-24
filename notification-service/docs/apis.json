@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "de0f02c1-c1e7-4ee2-bc3f-cb1f1d9fcaa9",
+		"name": "Sample App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Store profiles",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n     \"msisdn\" : \"01700477446\",\n     \"type\" : \"UNICODE\"\n    },\n    {\n     \"msisdn\" : \"01700477223\",\n     \"type\" : \"ENGLISH\"\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "192.168.0.106/api/set/userProfiles",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"106"
+					],
+					"path": [
+						"api",
+						"set",
+						"userProfiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "192.168.0.106/api/getType?msisdn=01700477223",
+					"host": [
+						"192",
+						"168",
+						"0",
+						"106"
+					],
+					"path": [
+						"api",
+						"getType"
+					],
+					"query": [
+						{
+							"key": "msisdn",
+							"value": "01700477223"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "localhost:3008"
+		}
+	]
+}

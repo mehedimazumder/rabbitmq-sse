@@ -1,0 +1,5 @@
+/client/node_modules
+/client/yarn.lock
+/notification-service/node_modules
+/notification-service/package-lock.json
+/user-service-micro/target
